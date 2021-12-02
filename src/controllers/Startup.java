@@ -1,3 +1,5 @@
+package controllers;
+
 import models.User;
 import views.LoginView;
 
@@ -14,11 +16,10 @@ public class Startup {
 
     private void createUsers(){
         users = new ArrayList<>();
-        users.add(new User("Dean", "Lewis", "18/06/1988", 458));
-        users.add(new User("Dave", "Grass", "01/04/1964", 1));
-        users.add(new User("Jackie", "Dowling", "18/06/1986", 999));
+        users.add(new User("Dean", "Lewis", "18/06/1988", 458, "Dean", "Password"));
+        users.add(new User("Dave", "Grass", "01/04/1964", 1, "Davey", "P@ssword"));
+        users.add(new User("Jackie", "Dowling", "18/06/1986", 999, "JDog", "P@55w0rd"));
         LoginView lv = new LoginView();
         lv.displayLoginScreen();
     }
-
 }

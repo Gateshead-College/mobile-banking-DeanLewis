@@ -1,5 +1,7 @@
 package controllers;
 
+import models.User;
+
 import java.util.Scanner;
 
 public class LoginController {
@@ -22,8 +24,13 @@ public class LoginController {
 
     //compare username and password
     public boolean checkDetails(){
-        return username.equalsIgnoreCase(correctUN) &&
-                password.equals(correctPW);
+        for(User u : Startup.users){
+            if(u.getUsername().equalsIgnoreCase(username) &&
+            u.getPassword().equals(password)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public void loadMainMenu() {
