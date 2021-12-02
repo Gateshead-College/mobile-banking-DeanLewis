@@ -27,6 +27,7 @@ public class LoginController {
     }
 
     public void loadMainMenu() {
-        System.out.println("Loaded main menu.");
+        MainMenuController mmc = new MainMenuController();
+        mmc.displayMenu();
     }
 }
