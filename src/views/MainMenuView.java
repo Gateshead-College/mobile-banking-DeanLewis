@@ -11,6 +11,4 @@ public class MainMenuView {
         System.out.println("3 - Logout");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
-
-
 }
